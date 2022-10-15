@@ -5,24 +5,24 @@ while (true)
 {
     Console.WriteLine();
     Console.WriteLine("Решето Эратосфена");
-    Console.WriteLine("ВВедите число");
+    Console.WriteLine("Вdедите число");
     int x = Convert.ToInt32(Console.ReadLine());
-    bool[] A = new bool[x];
+    bool[] M = new bool[x];
 
     stopwatch.Start();
     for (int i = 2; i < Math.Sqrt(x) + 1; i++)
     {
-        if (!A[i])
+        if (!M[i])
         {
             for (int j = i * i; j < x; j += i)
             {
-                A[j] = true;
+                M[j] = true;
             }
         }
     }
     for (int i = 2; i < x; i++)
     {
-        if (!A[i])
+        if (!M[i])
         {
             Console.WriteLine("{0}", i);
         }
